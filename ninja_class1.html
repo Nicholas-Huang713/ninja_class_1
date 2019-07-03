@@ -1,0 +1,30 @@
+<html>
+
+<script>
+
+function Ninja(name){
+    this.health = 100;
+    this.name = name;
+    var speed = 3;
+    var strength = 3;
+    this.sayName = function(){
+        console.log(this.name);
+    }
+    this.showStats = function(){
+        console.log(this.health, speed, strength);
+    }
+    this.drinkSake = function(){
+        this.health += 10;
+        console.log(this.health);
+    }
+}
+
+var joe = new Ninja("Joe");
+joe.sayName();
+joe.showStats();
+joe.drinkSake();
+joe.showStats();
+
+
+</script>
+</html>
