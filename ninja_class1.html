@@ -15,15 +15,34 @@ function Ninja(name){
     }
     this.drinkSake = function(){
         this.health += 10;
-        console.log(this.health);
+        console.log("Health is now " + this.health);
     }
+    this.punch = function(name){
+        if (name instanceof Ninja == false){
+            console.log("No such person exists...")
+        }
+        else{
+            name.health -= 5;
+            console.log( name.name + "'s health is now " + name.health);
+        }
+        
+    } 
 }
 
+function Butt(name){
+    this.name = name;
+}
+
+var crack = new Butt("Crack");
+
 var joe = new Ninja("Joe");
-joe.sayName();
-joe.showStats();
-joe.drinkSake();
-joe.showStats();
+var bob = new Ninja("Bob");
+var jack = 
+// joe.sayName();
+// joe.showStats();
+// joe.drinkSake();
+// joe.showStats();
+joe.punch(bob);
 
 
 </script>
